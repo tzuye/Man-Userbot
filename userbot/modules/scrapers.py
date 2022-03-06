@@ -536,7 +536,7 @@ async def download_video(v_url):
         # Noob way to convert from .mkv to .mp4
         if f_path.endswith(".mkv") or f_path.endswith(".webm"):
             base = os.path.splitext(f_path)[0]
-            os.rename(f_path, f'{base}.mp4')
+            os.rename(f_path, f"{base}.mp4")
             f_path = glob(os.path.join(TEMP_DOWNLOAD_DIRECTORY, str(s_time), "*"))[0]
         f_name = os.path.basename(f_path)
         with open(f_path, "rb") as f:
